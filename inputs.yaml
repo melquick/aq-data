@@ -1,0 +1,115 @@
+---
+users:
+  - Ben Weinberg
+  - Nick (Real User)
+  - Jingxuan Wu
+  - Huishan Li
+  - Jean-Baptiste Lugagne
+  - Justin Letendre
+  - Ariel Langevin
+  - Manuel Gimenez
+  - Matthew Brenner
+  - Melanie Quick
+  - Minhee Park
+  - Marilene Pavan
+  - Rita Chen
+  - Thomas Real
+  - Tiebin Wang
+  - Xi
+
+protocols:
+  - Extract Fragment
+  - Order Primer
+  - Check Plate
+  - Make Overnight Inoculum
+  - Make Glycerol Stock
+  - PCR
+  - Run On Agarose Gel
+  - Ligation
+  - Restriction Digest
+  - Modular Cloning
+  - Gibson Assembly
+  - Rehydrate Primer
+  - Purify Gel Slice
+  - Make Miniprep
+  - E.coli Transformation
+  - Purify DNA from Reaction
+  - Send to Sequencing
+  - Upload Sequencing Results
+  - Confirm Sequencing Results
+  - Mutagenesis
+  - Mutagenesis by Inverse PCR
+
+times:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 135
+  - 120
+  - 60
+  - 0
+  - 0
+  - 0
+  - 32
+  - 27
+  - 92.5
+  - 38
+  - 0
+  - 0
+  - 0
+  - 130
+  - 130
+  
+costs:
+  - 1
+  - 6
+  - 0
+  - 2
+  - 2
+  - 3
+  - 4
+  - 4
+  - 2
+  - 6
+  - 4
+  - 2
+  - 4
+  - 3
+  - 11
+  - 4
+  - 5
+  - 0
+  - 0
+  - 22
+  - 3
+
+outputs:
+  - Date
+  - ID
+  - Protocol
+  - Technician
+  - Status
+  - Error Message
+  - Job Size
+  - Runtime
+  - Hands-off Time
+  - Hands-on Time
+  - Hands-on Time/Job
+  - Cost/Job
+  - Total Cost
+  - Cost/Minute (Total)
+  - Cost/Minute (Hands-on)
+  - Concentration Keyword
+  - White Colonies
+  - Blue Colonies
+  
+errors:
+  - incorrect_length
+  - input_volume_error
+  - no_growth
+  - output_below_min_conc
+  - incorrect_seq_results
+...
