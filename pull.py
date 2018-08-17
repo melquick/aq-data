@@ -261,19 +261,25 @@ class DAMPAqData:
                 value = self.session.User.find(int(op.jobs[-1].user_id)).name
             if key == "Status":
                 value = op.status
-                if op.data_associations and value == "error":
-                    for da in op.data_associations:
-                        if da.key == "job_crash":
-                            value = "crashed"
-                        if da.key == "aborted":
-                            value = "aborted"
-                        if da.key == "canceled":
-                            value = "canceled"
+                try:
+                    if op.data_associations and value == "error":
+                        for da in op.data_associations:
+                            if da.key == "job_crash":
+                                value = "crashed"
+                            if da.key == "aborted":
+                                value = "aborted"
+                            if da.key == "canceled":
+                                value = "canceled"
+                except:
+                    pass
             if key == "Error Message":
-                if op.data_associations and self.op_data["Status"][-1] != "done":
-                    data = (da for da in op.data_associations if da.key in self.ERRORS)    
-                    for da in data:
-                        value = da.key
+                try:
+                    if op.data_associations and self.op_data["Status"][-1] != "done":
+                        data = (da for da in op.data_associations if da.key in self.ERRORS)    
+                        for da in data:
+                            value = da.key
+                except:
+                    pass
             if key == "Job Size":
                 value = len(op.jobs[-1].operations)
             if key == "Runtime":
